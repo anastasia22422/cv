@@ -6,6 +6,182 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ana's Portfolio</title>
+  <style>
+    /* Reset some default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #18bc9c;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background-color: white;
+      border-radius: 8px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #2c3e50;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Projects Section */
+    .project {
+      margin-bottom: 2rem;
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .project h3 {
+      font-size: 1.5rem;
+      color: #18bc9c;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Skills Section Flexbox */
+    .skills-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .resume-section {
+      flex: 1;
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .resume-section h3 {
+      font-size: 1.75rem;
+      color: #2c3e50;
+      margin-bottom: 0.75rem;
+    }
+
+    .resume-section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .sub-section h4 {
+      font-size: 1.5rem;
+      color: #18bc9c;
+      margin-bottom: 0.5rem;
+    }
+
+    .sub-section p {
+      margin-bottom: 1rem;
+    }
+
+    /* Add margin to Knowledge of Programs */
+    .knowledge-section {
+      margin-bottom: 2rem;
+      /* Adjust this value for more space */
+    }
+
+    /* Contact Section */
+    #contact a {
+      color: #18bc9c;
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #2c3e50;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    #shadow-host-companion {
+      display: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      /* Stack the skill containers vertically on smaller screens */
+      .skills-container {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
