@@ -70,21 +70,39 @@
     }
 
     /* Projects Section */
-    .project {
+    .project-section {
       margin-bottom: 2rem;
     }
 
-    .project img {
+    .project-container {
+      flex: 1; /* Makes containers grow equally */
+      text-align: center; /* Center-align the text under the image */
+      margin: 1rem; /* Add margin for spacing */
+    }
+
+    .project-container img {
       width: 100%;
-      max-width: 600px;
+      max-width: 300px; /* Adjust the max width as necessary */
       border-radius: 8px;
       margin-bottom: 1rem;
     }
 
-    .project h3 {
+    .project-container h4 {
       font-size: 1.5rem;
       color: #18bc9c;
       margin-bottom: 0.5rem;
+    }
+
+    .project-container p {
+      font-size: 1rem;
+      color: #666; /* Optional: add color for description */
+    }
+
+    /* Flexbox for Projects */
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap; /* Allows items to wrap to the next line */
+      justify-content: space-between; /* Space out items evenly */
     }
 
     /* Skills Section Flexbox */
@@ -177,40 +195,19 @@
       }
 
       /* Stack the skill containers vertically on smaller screens */
-      .skills-container
-      .project-section
-      {
+      .skills-container {
         flex-direction: column;
       }
+
+      /* Responsive project layout */
+      .projects-grid {
+        flex-direction: column; /* Stacks project containers on smaller screens */
+      }
+
+      .project-container {
+        margin: 1rem 0; /* Margin for vertical spacing */
+      }
     }
-    /* Projects Section */
-.project-section {
-  margin-bottom: 2rem;
-}
-
-.project-container {
-  margin-bottom: 2rem;
-  text-align: center; /* Center-align the text under the image */
-}
-
-.project-container img {
-  width: 100%;
-  max-width: 600px; /* Adjust the max width as necessary */
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.project-container h4 {
-  font-size: 1.5rem;
-  color: #18bc9c;
-  margin-bottom: 0.5rem;
-}
-
-.project-container p {
-  font-size: 1rem;
-  color: #666; /* Optional: add color for description */
-}
-
   </style>
 </head>
 
@@ -261,16 +258,16 @@
           <li>HTML/CSS</li>
           <li>Content Management Systems</li>
           <li>Email Marketing Knowledge</li>
-          <li>Social Media Marketing </li>
+          <li>Social Media Marketing</li>
           <li>User Experience Knowledge</li>
-          <li>WEB Development Knowledge</li>
+          <li>Web Development Knowledge</li>
         </ul>
       </div>
     </div>
 
     <div class="resume-section knowledge-section">
       <h3>Knowledge of Programs</h3>
-      <p>Figma, VS-code, Canva, MailChimp, Wordpress, Google Analytics, Clarity, Semrush, Meta Business Suite/Ads Manager, GitHub</p>
+      <p>Figma, VS-code, Canva, MailChimp, WordPress, Google Analytics, Clarity, Semrush, Meta Business Suite/Ads Manager, GitHub</p>
     </div>
 
     <!-- Additional Information -->
@@ -280,65 +277,73 @@
       <!-- Education -->
       <div class="sub-section">
         <h4>Education</h4>
-        <p><bold>Tavrida National V.I. Vernadsky University</bold> (nostraficated 2024):</p>
-           <p>Master degree in International Law, 2019</p>
-            <p>Bachelor degree in Law, 2021</p>
-            <p><bold>Coursera:</bold> Digital Marketing and E-commerce, 2023</p>
-            <p><bold>Mate academy:</bold> full-stack developer+UX/UI designer, 2024</p>
+        <p><strong>Tavrida National V.I. Vernadsky University</strong> (nostrificated 2024):</p>
+        <p>Master's degree in International Law, 2019</p>
+        <p>Bachelor's degree in Law, 2021</p>
+        <p><strong>Coursera:</strong> Digital Marketing and E-commerce, 2023</p>
+        <p><strong>Mate Academy:</strong> Full-stack developer + UX/UI designer, 2024</p>
       </div>
 
       <!-- Languages -->
       <div class="sub-section">
         <h4>Languages</h4>
-        <p>English, Czech, Ukranian</p>
+        <p>English, Czech, Ukrainian</p>
       </div>
     </div>
   </section>
 
   <section id="projects">
+    <h2>Projects</h2>
+
+    <!-- Web Experience Section -->
     <div class="project-section">
-        <h3>Web Experience</h3>
+      <h3>Web Experience</h3>
+      <div class="projects-grid">
         <div class="project-container">
-            <img src="./image/bakery.PNG" alt="Web Project 1">
-            <h4>First-project-bakery</h4>
-            <p>Description of the web project, including technologies used and its purpose.</p>
+          <img src="./image/bakery.PNG" alt="Web Project 1">
+          <h4>First Project - Bakery</h4>
+          <p>Description of the web project, including technologies used and its purpose.</p>
         </div>
         <div class="project-container">
-            <img src="web_project2.jpg" alt="Web Project 2">
-            <h4>WPsmartsearch.com</h4>
-            <p>Description of the web project, including technologies used and its purpose.</p>
+          <img src="./image/courses.PNG" alt="Web Project 2">
+          <h4>Second Project - Courses</h4>
+          <p>Description of the web project, including technologies used and its purpose.</p>
         </div>
         <div class="project-container">
-            <img src="web_project3.jpg" alt="Web Project 3">
-            <h4>Project Title 3</h4>
-            <p>Description of the web project, including technologies used and its purpose.</p>
+          <img src="./image/photography.PNG" alt="Web Project 3">
+          <h4>Third Project - Photography</h4>
+          <p>Description of the web project, including technologies used and its purpose.</p>
         </div>
+        <!-- Additional projects can be added here -->
+      </div>
     </div>
 
     <!-- Design/Maintenance Experience Section -->
     <div class="project-section">
-        <h3>Design/Maintenance Experience</h3>
+      <h3>Design/Maintenance Experience</h3>
+      <div class="projects-grid">
         <div class="project-container">
-            <img src="design_project1.jpg" alt="Design Project 1">
-            <h4>Project Title 1</h4>
-            <p>Description of the design/maintenance project, including key features and outcomes.</p>
+          <img src="design_project1.jpg" alt="Design Project 1">
+          <h4>Project Title 1</h4>
+          <p>Description of the design/maintenance project, including key features and outcomes.</p>
         </div>
         <div class="project-container">
-            <img src="design_project2.jpg" alt="Design Project 2">
-            <h4>Project Title 2</h4>
-            <p>Description of the design/maintenance project, including key features and outcomes.</p>
+          <img src="design_project2.jpg" alt="Design Project 2">
+          <h4>Project Title 2</h4>
+          <p>Description of the design/maintenance project, including key features and outcomes.</p>
         </div>
         <div class="project-container">
-            <img src="design_project3.jpg" alt="Design Project 3">
-            <h4>Project Title 3</h4>
-            <p>Description of the design/maintenance project, including key features and outcomes.</p>
+          <img src="design_project3.jpg" alt="Design Project 3">
+          <h4>Project Title 3</h4>
+          <p>Description of the design/maintenance project, including key features and outcomes.</p>
         </div>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Thank you for reviewing my CV, and I look forward to your feedback</p>
+    <p>Thank you for reviewing my CV, and I look forward to your feedback.</p>
     <p>Phone: +XXXXXXXXX</p>
   </section>
 
